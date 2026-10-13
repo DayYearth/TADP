@@ -86,48 +86,6 @@ These values are reported experiment results preserved in notebook outputs. Publ
 
 Notebook 15 is the entry point for the final paper results. Earlier notebooks document development and diagnostics; they are not a mandatory sequential execution pipeline.
 
-## Availability and execution requirements
-
-This repository currently contains **15 notebooks with their saved outputs**. The external Python package `tadp`, raw datasets, cached datasets, and standalone final-result CSV files are not included in this snapshot.
-
-The notebooks expect this Google Drive layout:
-
-```text
-MyDrive/TADP_Q1/
-├── code/tadp/
-├── raw_cic/
-├── cache_cic/
-└── results/b15_chot/
-```
-
-Notebook 15 requires these package files:
-
-```text
-__init__.py       cic_data.py       config.py
-data.py           experts.py        few_label.py
-final_run.py      label_free.py     metrics.py
-model_families.py preprocess.py     shift.py
-window_threshold.py
-```
-
-To rerun the final experiment once the matching package and data are available:
-
-1. Use a Google Colab CPU runtime.
-2. Place the matching `tadp` package in `MyDrive/TADP_Q1/code/`.
-3. Prepare `cache_cic/` using the dataset-preparation cells in notebook 05, or supply the original experiment caches.
-4. Run the environment check in notebook 15, followed by its experiment and summary cells.
-5. Inspect the results in `MyDrive/TADP_Q1/results/b15_chot/`.
-
-The package is required before these steps can succeed. Exact environment versions have not been recovered, so no version-pinned environment is claimed. Notebook imports include NumPy, pandas, scikit-learn, LightGBM, PyArrow, and PyTorch; the external package may require additional dependencies.
-
-Historical notebooks expect different versions of shared modules. Their byte-size checks may fail against the final package, and successful size checks do not establish source-code identity.
-
-## Dataset access
-
-Dataset-download references are provided in notebook 05. The corrected CIC datasets are available from the [DistriNet dataset project](https://intrusion-detection.distrinet-research.be/). The notebook also records the CIC-ToN-IoT download procedure and expects the CIC-UNSW-NB15 CSV in `raw_cic/`.
-
-Use the dataset sources and references identified in the manuscript. Dataset access and reuse remain subject to their providers' terms. Large raw data and caches are not redistributed here.
-
 ## Interpretation and limitations
 
 - Findings apply to these four datasets and the evaluated methods; advanced representation-learning and active-learning methods were not reimplemented.
