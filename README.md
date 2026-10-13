@@ -2,7 +2,7 @@
 
 Research notebooks accompanying **Learning with few target labels for cross-domain intrusion detection under episode-wise temporal evaluation**.
 
-**Authors:** Lê Huy Hoàng, Nguyễn Quang Trung, and Trần Hoàng Hải  
+**Authors:** Nguyễn Quang Trung | Lê Huy Hoàng | Trần Hoàng Hải  
 **Affiliation:** School of Information and Communication Technology, Hanoi University of Science and Technology, Hanoi, Vietnam
 
 ## Research question
